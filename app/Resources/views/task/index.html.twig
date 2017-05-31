@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% import "task/status-macro.html.twig" as mStatus %}
+
+{% block body %}
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3>Список задачь мне</h3>
+
+        <table class="table">
+            <tr>
+                <th>
+                    Название:
+                </th>
+                <th>
+                    Статус
+                </th>
+                <th>
+                    Автор:
+                </th>
+                <th>
+                    Дата создания
+                </th>
+            </tr>
+            {% for task in tasksToMe %}
+                <tr>
+                    <td>
+                        <a href="{{ path('task', {'id': task.id}) }}">
+                            {{ task.name }}
+                        </a>
+                    </td>
+                    <td>
+                        {{ mStatus.setStatus(task.status) }}
+                    </td>
+                    <td>
+                        {{ task.author.username }}
+                    </td>
+                    <td>
+                        {{ task.dateCreate | date('d.m.Y') }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <h3>Список моих задачь</h3>
+
+        <table class="table">
+            <tr>
+                <th>
+                    Название:
+                </th>
+                <th>
+                    Статус
+                </th>
+                <th>
+                    Исполнитель:
+                </th>
+                <th>
+                    Дата создания
+                </th>
+            </tr>
+            {% for task in tasksMy %}
+                <tr>
+                    <td>
+                        <a href="{{ path('task', {'id': task.id}) }}">
+                            {{ task.name }}
+                        </a>
+                    </td>
+                    <td>
+                        {{ mStatus.setStatus(task.status) }}
+                    </td>
+                    <td>
+                        {{ task.performer.username }}
+                    </td>
+                    <td>
+                        {{ task.dateCreate | date('d.m.Y') }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

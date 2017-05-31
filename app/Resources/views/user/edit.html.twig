@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+
+<h3>Учетные данные</h3>
+
+<table class="table">
+    <tr>
+        <td>
+            {{ form_label(form.delFile) }}
+        </td>
+        <td>
+            {{ form_widget(form.delFile) }}
+        </td>
+        <td>
+            {% if not (user.webPreviewPath is empty) %}
+                <img src="{{ user.webPreviewPath }}" alt="ava" />
+            {% else %}
+                <span class="label label-danger">Ещё не загружен</span>
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.file) }}
+        </td>
+        <td>
+            {{ form_widget(form.file) }}
+        </td>
+        <td>
+            {{ form_errors(form.file) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.username) }}
+        </td>
+        <td>
+            {{ form_widget(form.username) }}
+        </td>
+        <td>
+            {{ form_errors(form.username) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.email) }}
+        </td>
+        <td>
+            {{ form_widget(form.email) }}
+        </td>
+        <td>
+            {{ form_errors(form.email) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.sex) }}
+        </td>
+        <td>
+            {{ form_widget(form.sex) }}
+        </td>
+        <td>
+            {{ form_errors(form.sex) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.birth) }}
+        </td>
+        <td>
+            {{ form_widget(form.birth) }}
+        </td>
+        <td>
+            {{ form_errors(form.birth) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.city) }}
+        </td>
+        <td>
+            {{ form_widget(form.city) }}
+        </td>
+        <td>
+            {{ form_errors(form.city) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.address) }}
+        </td>
+        <td>
+            {{ form_widget(form.address) }}
+        </td>
+        <td>
+            {{ form_errors(form.address) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.phone) }}
+        </td>
+        <td>
+            {{ form_widget(form.phone) }}
+        </td>
+        <td>
+            {{ form_errors(form.phone) }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            {{ form_label(form.current_password) }}
+        </td>
+        <td>
+            {{ form_widget(form.current_password) }}
+        </td>
+        <td>
+            {{ form_errors(form.current_password) }}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+
+            {{ form_widget(form.save) }}
+        </td>
+    </tr>
+</table>
+
+{{ form_end(form) }}
+
+{% endblock %}

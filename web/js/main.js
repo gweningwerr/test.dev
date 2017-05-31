@@ -1,0 +1,1 @@
+$(document).ready(function(){$(document).on("click",".status-btn",function(){var t=$(this).attr("data-url");$.ajax({url:t,type:"GET",dataType:"json",success:function(t){1==t.res?$(".status-row").html(t.html):alert(t.msg)}})})});

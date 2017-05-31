@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h3>Учетные данные</h3>
+
+<table class="table">
+    <tr>
+        <td>
+            <b>Аватар:</b>
+        </td>
+        <td>
+            {% if not (user.getWebPreviewPath is empty) %}
+                <img src="{{ user.getWebPreviewPath }}" alt="ava" />
+            {% else %}
+                <span class="label label-danger">Не загружен</span>
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Псевдоним:</b>
+        </td>
+        <td>
+            {{ user.username }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Email:</b>
+        </td>
+        <td>
+            {{ user.email }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Пол:</b>
+        </td>
+        <td>
+            {{ user.sex ? 'Мужской' : 'Женский' }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Дата рождения:</b>
+        </td>
+        <td>
+            {{ user.birth | date('d.m.Y') }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Город:</b>
+        </td>
+        <td>
+            {{ user.city }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Адрес:</b>
+        </td>
+        <td>
+            {{ user.address }}
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <b>Телефон:</b>
+        </td>
+        <td>
+            {{ user.phone }}
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <a href="{{ path('profile_edit') }}" class="btn btn-default">Изменить</a>
+        </td>
+    </tr>
+</table>
+
+{% endblock %}
+

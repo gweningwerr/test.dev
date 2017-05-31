@@ -1,0 +1,87 @@
+group.edit.submit: 'Обновить группу'
+group.show.name: 'Название группы'
+group.new.submit: 'Создать группу'
+group.flash.updated: 'Группа обновлена'
+group.flash.created: 'Группа создана'
+group.flash.deleted: 'Группа удалена'
+security.login.username: 'Имя пользователя:'
+security.login.password: 'Пароль:'
+security.login.remember_me: 'Запомнить меня'
+security.login.submit: Войти
+profile.title: 'Профиль пользователя'
+profile.hello: Привет
+profile.show.username: Логин
+profile.show.email: Email
+profile.show.email_readonly: 'Смена Email скоро будет доступна'
+profile.show.password: Пароль
+profile.show.password_change: 'Изменить пароль'
+profile.show.password_new: 'Введите новый пароль'
+profile.show.password_repeat: 'Подтвердите пароль'
+profile.edit.submit: Сохранить
+profile.edit.cancel: Отменить
+profile.flash.updated: 'Профиль был обновлен'
+profile.information.header.manager: 'Управление профилем'
+profile.information.header.personal: 'Мой профиль'
+profile.information.header.delivery: 'Информация для доставки'
+profile.information.edit: Редактировать
+profile.information.personal: 'Персональные данные'
+profile.information.title: Обращение
+profile.information.gender: 'Выберите пол'
+profile.information.sex.male: Господин
+profile.information.sex.female: Госпожа
+profile.information.name: Имя
+profile.information.surname: Фамилия
+profile.information.contact: Контакты
+profile.information.shipping: 'Для доставки'
+profile.information.email: Email
+profile.information.location: Адрес
+profile.information.address.country: Страна
+profile.information.address.index: Индекс
+profile.information.address.code_phone: 'Телефонный код'
+profile.information.address.region: Регион/Штат/Провинция
+profile.information.address.city: Город
+profile.information.address.address: 'Улица, дом, офис/Квартира/Строение'
+profile.information.address.phone: Телефон
+profile.information.footer.additional: 'Дополнительная информация'
+profile.error.phone: 'Разрешены символы 0-9'
+change_password.submit: 'Изменить пароль'
+change_password.flash.success: 'Пароль изменен'
+registration.check_email: 'Письмо отправлено на адрес %email%. В нём содержится ссылка, по которой вы можете подтвердить свою регистрацию.'
+registration.confirmed: 'Поздравляем %username%, ваш аккаунт подтвержден.'
+registration.back: 'Вернуться на предыдущую страницу.'
+registration.submit: Регистрация
+registration.flash.user_created: 'Пользователь успешно создан'
+registration.email.subject: 'Добро пожаловать, %username%!'
+registration.email.message: '| Приветствуем, %username%!  Для подтверждения вашей регистрации, пройдите по ссылке %confirmationUrl%  С наилучшими пожеланиями, команда сайта.'
+resetting.password_already_requested: 'Пароль для данного пользователя уже запрашивался за последние 24 часа.'
+resetting.check_email: 'Письмо на адрес %email% уже отправлено. <br>Оно содержит ссылку, при переходе по которой ваш пароль будет сброшен.'
+resetting.request.invalid_username: 'Пользователь ’%username%’ не существует.'
+resetting.request.username: 'Email:'
+resetting.request.submit: 'Сменить пароль'
+resetting.reset.submit: 'Изменить пароль'
+resetting.flash.success: 'Пароль успешно сброшен'
+resetting.email.subject: 'Смена пароля для сайта Tile.Expert'
+resetting.email.message: '| Уважаемый пользователь (%username%)  Чтобы изменить пароль, перейдите, пожалуйста, по следующей ссылке (%confirmationUrl%)  С уважением, команда Tile.Expert'
+resetting.field.fill: 'Заполните поле'
+resetting.confirm.reset: 'Подтвердите сброс пароля'
+resetting.confirm.confirmed: Подтверждение
+resetting.password.new: 'Новый пароль'
+resetting.password.enter_new: 'Введите новый пароль'
+resetting.password.repeat_password: Повторите
+resetting.password.save_password: Сохранить
+resetting.goto.site: 'Перейти на сайт'
+resetting.success.logged: 'Вход выполнен под именем %email%'
+resetting.success.success: 'Пароль успешно сброшен'
+layout.logout: Выход
+layout.login: Вход
+layout.register: Регистрация
+layout.logged_in_as: 'Вы вошли как %username%'
+layout.sign_in: Войти
+form.group_name: 'Название группы:'
+form.username: 'Имя пользователя:'
+form.email: 'Электронная почта:'
+form.current_password: 'Текущий пароль:'
+form.password: 'Пароль:'
+form.password_confirmation: 'Подтвердите пароль:'
+form.new_password: 'Новый пароль:'
+form.new_password_confirmation: 'Подтвердите пароль:'

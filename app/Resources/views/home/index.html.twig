@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% macro setTaskData(task) %}
+    <div class="task-box">
+        <a href="{{ path('task', {'id': task.id}) }}">
+            {{ task.name }}
+        </a><br>
+        <small>({{ task.dateCreate | date('d.m.Y') }})</small>
+        <small> - {{ task.author.username }}</small>
+        <p>{{ task.description }}</p>
+        Исполнитель: <b>{{ task.performer.username }}</b>
+    </div>
+{% endmacro %}
+
+{% import _self as mTask %}
+
+{% block body %}
+    {% spaceless %}
+
+    <h2>Все задачи проекта</h2>
+
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+        <h3>Новые</h3>
+
+        {% for task in tasks if task.status.id == 1 %}
+            {{ mTask.setTaskData(task) }}
+        {% endfor %}
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+        <h3>В работе</h3>
+
+        {% for task in tasks if task.status.id == 2 %}
+            {{ mTask.setTaskData(task) }}
+        {% endfor %}
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+        <h3>На проверке</h3>
+
+        {% for task in tasks if task.status.id == 3 %}
+            {{ mTask.setTaskData(task) }}
+        {% endfor %}
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+
+        <h3>Закрытые</h3>
+
+        {% for task in tasks if task.status.id == 4 %}
+            {{ mTask.setTaskData(task) }}
+        {% endfor %}
+    </div>
+
+    {% endspaceless %}
+{% endblock %}

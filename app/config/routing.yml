@@ -1,0 +1,12 @@
+app.login_check:
+    path: /login_check
+
+app.logout:
+    path: /logout
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

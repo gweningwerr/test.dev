@@ -1,0 +1,44 @@
+{
+  "name": "test.dev",
+  "version": "1.0.0",
+  "description": "App for example my skils",
+  "main": "app.php",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@89.108.79.22/home/git/repo/test.dev.git"
+  },
+  "keywords": [
+    "symfony",
+    "test work"
+  ],
+  "author": "IgorKd <gweningwarr@ya.ru>",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "material-ui": "^0.16.0",
+    "spin": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.0",
+    "vinyl-source-stream": "^1.1.0",
+    "less": "^2.6.1",
+    "glob": "^7.1.0",
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-less": "^3.0.5",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.0"
+  }
+}

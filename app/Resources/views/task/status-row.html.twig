@@ -1,0 +1,34 @@
+{% import "task/status-macro.html.twig" as mStatus %}
+
+<td>
+    Статус:
+</td>
+<td>
+    {{ mStatus.setStatus(task.status) }}
+</td>
+<td>
+    {% if task.status.id == 1 and performer %}
+        <a class="btn btn-default btn-xs status-btn"
+           href="javascript:void(0)"
+           data-url="{{ path('status_change', {'id':task.id, 'status':2}) }}"
+           role="button">взять в работу</a>
+    {% elseif task.status.id == 2 and performer  %}
+        <a class="btn btn-default btn-xs status-btn"
+           href="javascript:void(0)"
+           data-url="{{ path('status_change', {'id':task.id, 'status':3}) }}"
+           role="button">уведомить об исполнении</a>
+    {% elseif task.status.id == 3 and author  %}
+        <a class="btn btn-success btn-xs status-btn"
+           href="javascript:void(0)"
+           data-url="{{ path('status_change', {'id':task.id, 'status':4}) }}"
+           role="button">принять</a>
+    {% endif %}
+</td>
+<td>
+    {% if task.status.id == 3 and author %}
+        <a class="btn btn-danger btn-xs status-btn"
+           href="javascript:void(0)"
+           data-url="{{ path('status_change', {'id':task.id, 'status':2}) }}"
+           role="button">вернуть на доработку</a>
+    {% endif %}
+</td>

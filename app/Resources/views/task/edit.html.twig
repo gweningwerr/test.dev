@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+
+        <form id="form-task" class="task" method="post" action="">
+
+            <div class="panel-heading">Редактирование задачи</div>
+
+            <table class="table">
+                <tr>
+                    <td>
+                        {{ form_label(taskForm.name) }}
+                    </td>
+                    <td>
+                        {{ form_widget(taskForm.name) }}
+                    </td>
+                    <td>
+                        {{ form_errors(taskForm.name) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_label(taskForm.description) }}
+                    </td>
+                    <td>
+                        {{ form_widget(taskForm.description) }}
+                    </td>
+                    <td>
+                        {{ form_errors(taskForm.description) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_label(taskForm.performer) }}
+                    </td>
+                    <td>
+                        {{ form_widget(taskForm.performer) }}
+                    </td>
+                    <td>
+                        {{ form_errors(taskForm.performer) }}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{ form_widget(taskForm.save) }}
+                    </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+{% endblock body %}

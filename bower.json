@@ -1,0 +1,24 @@
+{
+  "name": "test.dev",
+  "description": "App for example my skils",
+  "main": "",
+  "moduleType": [],
+  "authors": [
+      "IgorKd"
+  ],
+  "license": "MIT",
+  "homepage": "test.dev",
+  "ignore": [
+      "**/.*",
+      "node_modules",
+      "bower_components",
+      "web/assets/vendor/",
+      "test",
+      "tests"
+  ],
+  "dependencies": {
+      "jquery": "^3.1.1",
+      "bootstrap": "^3.3.6",
+      "spin.js": "spinjs#^2.3.2"
+  }
+}

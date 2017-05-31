@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+
+    <form id="form-reg" class="reg" method="post" enctype="multipart/form-data" action="">
+        {{ form_row(form._token) }}
+
+        <div class="panel-heading">Учетные данные</div>
+
+        <table class="table">
+            <tr>
+                <td>
+                    {{ form_label(form.file) }}
+                </td>
+                <td>
+                    {{ form_widget(form.file) }}
+                </td>
+                <td>
+                    {{ form_errors(form.file) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.username) }}
+                </td>
+                <td>
+                    {{ form_widget(form.username) }}
+                </td>
+                <td>
+                    {{ form_errors(form.username) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.email) }}
+                </td>
+                <td>
+                    {{ form_widget(form.email) }}
+                </td>
+                <td>
+                    {{ form_errors(form.email) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.plainPassword.first) }}
+                </td>
+                <td>
+                    {{ form_widget(form.plainPassword.first) }}
+                </td>
+                <td>
+                    {{ form_errors(form.plainPassword.first) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.plainPassword.second) }}
+                </td>
+                <td>
+                    {{ form_widget(form.plainPassword.second) }}
+                </td>
+                <td>
+                    {{ form_errors(form.plainPassword.second) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.sex) }}
+                </td>
+                <td>
+                    {{ form_widget(form.sex) }}
+                </td>
+                <td>
+                    {{ form_errors(form.sex) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.birth) }}
+                </td>
+                <td>
+                    {{ form_widget(form.birth) }}
+                </td>
+                <td>
+                    {{ form_errors(form.birth) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.city) }}
+                </td>
+                <td>
+                    {{ form_widget(form.city) }}
+                </td>
+                <td>
+                    {{ form_errors(form.city) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.address) }}
+                </td>
+                <td>
+                    {{ form_widget(form.address) }}
+                </td>
+                <td>
+                    {{ form_errors(form.address) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_label(form.phone) }}
+                </td>
+                <td>
+                    {{ form_widget(form.phone) }}
+                </td>
+                <td>
+                    {{ form_errors(form.phone) }}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ form_widget(form.save) }}
+                </td>
+                <td>
+                    Уже зарегистрированы? <a href="{{ path('login') }}">авторизируйтесь!</a>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</div>
+{% endblock body %}

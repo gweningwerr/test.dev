@@ -1,0 +1,15 @@
+{% macro setStatus(status) %}
+    {% if status.id == 1 %}
+        {% set st = 'danger' %}
+    {% elseif status.id == 2 %}
+        {% set st = 'default' %}
+    {% elseif status.id == 3 %}
+        {% set st = 'primary' %}
+    {% else %}
+        {% set st = 'success' %}
+    {% endif %}
+
+    <span class="label label-{{ st }}">
+        {{ status.name }}
+    </span>
+{% endmacro %}

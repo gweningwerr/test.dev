@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <h2>{{ task.name }}</h2>
+
+    <table class="table">
+        <tr class="status-row">
+            {{ statusRow | raw }}
+        </tr>
+        <tr>
+            <td>
+                Описание:
+            </td>
+            <td colspan="3">
+                {{ task.description }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Заказчик:
+            </td>
+            <td colspan="3">
+                <b>{{ task.author.username }}</b> /
+                <small>email: <a href="mailto:{{ task.author.email }}">({{ task.author.email }})</a></small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Исполнитель:
+            </td>
+            <td colspan="3">
+                <b>{{ task.performer.username }}</b> /
+                <small>email: <a href="mailto:{{ task.performer.email }}">({{ task.performer.email }})</a></small>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Дата создания
+            </td>
+            <td colspan="3">
+                {{ task.dateCreate |date ('d.m.Y') }}
+            </td>
+        </tr>
+
+        {% if task.dateClose != null %}
+            <tr>
+                <td>
+                    Дата Завиршения
+                </td>
+                <td colspan="3">
+                    {{ task.dateClose |date ('d.m.Y') }}
+                </td>
+            </tr>
+        {% endif %}
+    </table>
+
+{% endblock %}
